@@ -30,7 +30,7 @@ class Product {
   void printDetails() {
     print("[$id] $name | Kategori: $category");
     print(
-      "Harga: Rp${price.toStringAsFixed(0)} | Stok: $stock ($getStatusStok())",
+      "Harga: Rp${price.toStringAsFixed(0)} | Stok: $stock (${getStatusStok()})",
     );
     print("Deskripsi: ${description ?? 'Tidak ada deskripsi'}");
   }
@@ -128,7 +128,7 @@ List<Product> dummyProducts = [
     imageUrl: "assets/images/chino.png",
     category: "Fashion",
     stock: 14,
-    description: null, // Nullable test
+    description: null,
   ),
   Product(
     id: 7,
