@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'models/product.dart';
-import 'widgets/product_card.dart';
+import 'screens/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,22 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'TokoKita',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Katalog TokoKita'),
-          centerTitle: true,
-        ),
-        body: ListView.builder(
-          padding: const EdgeInsets.symmetric(vertical: 8),
-          itemCount: dummyProducts.length,
-          itemBuilder: (context, index) {
-            return ProductCard(product: dummyProducts[index]);
-          },
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
